@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>LeanOS Consultants | Mobile Workflow Itch Index</title>
+  <meta name="description" content="LeanOS helps Canadian businesses find workflow friction, score operational pain, reduce waste, and build practical systems for growth." />
+  <link rel="stylesheet" href="mobile-style.css" />
+</head>
+<body>
+  <div class="page-loader" aria-hidden="true"><span></span></div>
+
+  <header class="mobile-header" id="top">
+    <a href="#top" class="brand" aria-label="LeanOS home">
+      <img src="leanos_mobile_logo.png" alt="LeanOS Consultants logo" />
+      <span>
+        <strong>LeanOS</strong>
+        <small>Consultants</small>
+      </span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+      <a href="#itch-index">Itch Index</a>
+      <a href="#sectors">Sectors</a>
+      <a href="#score">Rank My Itch</a>
+      <a href="#method">Method</a>
+      <a href="#assessment">Assessment</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-pad">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Built for Canadian operators</p>
+        <h1>Find the workflow itch costing your team time.</h1>
+        <p class="hero-subcopy">LeanOS helps small and growing businesses score operational friction, reduce waste, and turn daily work into a clearer operating system.</p>
+        <div class="hero-actions">
+          <a href="#score" class="btn btn-primary">Rank My Itch</a>
+          <a href="https://wa.me/17789962619?text=Hello%20LeanOS%20Consultants%2C%20I%20would%20like%20to%20discuss%20a%20workflow%20problem%20in%20my%20business." class="btn btn-secondary" target="_blank" rel="noopener">WhatsApp LeanOS</a>
+        </div>
+      </div>
+
+      <div class="hero-panel reveal" aria-label="LeanOS mobile dashboard preview">
+        <div class="dashboard-top">
+          <div>
+            <span>Top itch score</span>
+            <strong id="heroScore">94</strong>
+          </div>
+          <div class="score-orbit" aria-hidden="true">
+            <span></span>
+            <b>94</b>
+          </div>
+        </div>
+        <div class="dashboard-card">
+          <p>Manufacturing</p>
+          <h2>Shift handoffs lose production context.</h2>
+          <div class="bar"><span style="width: 94%"></span></div>
+        </div>
+        <div class="dashboard-list">
+          <span>Waiting for approvals</span>
+          <span>Manual follow-up</span>
+          <span>Inventory mismatch</span>
+        </div>
+      </div>
+
+      <div class="metric-strip reveal" aria-label="LeanOS quick signals">
+        <article>
+          <strong data-count="12">0</strong>
+          <span>sector examples</span>
+        </article>
+        <article>
+          <strong data-count="36">0</strong>
+          <span>workflow itches</span>
+        </article>
+        <article>
+          <strong data-count="5">0</strong>
+          <span>score factors</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="ticker-section" aria-label="Common workflow pains">
+      <div class="ticker-track">
+        <span>Approval delays</span>
+        <span>Shift handoff loss</span>
+        <span>Client intake gaps</span>
+        <span>Quality rework</span>
+        <span>Manual status updates</span>
+        <span>Inventory mismatch</span>
+        <span>Document chasing</span>
+        <span>Returns admin</span>
+        <span>Approval delays</span>
+        <span>Shift handoff loss</span>
+        <span>Client intake gaps</span>
+        <span>Quality rework</span>
+      </div>
+    </section>
+
+    <section class="section-pad" id="itch-index">
+      <div class="section-head reveal">
+        <p class="eyebrow">Canadian workflow itch index</p>
+        <h2>Rank the problems your sector already feels.</h2>
+        <p>Filter common Canadian business pains by sector and size. Each score combines frequency, time waste, customer impact, team frustration, and automation potential.</p>
+      </div>
+
+      <div class="filter-panel reveal">
+        <label>
+          Sector
+          <select id="sectorFilter">
+            <option value="all">All sectors</option>
+          </select>
+        </label>
+        <label>
+          Business size
+          <select id="sizeFilter">
+            <option value="all">All sizes</option>
+            <option value="Small">Small</option>
+            <option value="Growing">Growing</option>
+            <option value="Mid-market">Mid-market</option>
+          </select>
+        </label>
+      </div>
+
+      <p class="index-status" id="indexStatus">Showing highest-priority workflow itches across Canada.</p>
+      <div class="itch-list" id="itchList" aria-live="polite"></div>
+    </section>
+
+    <section class="section-pad soft-bg" id="sectors">
+      <div class="section-head reveal">
+        <p class="eyebrow">Where LeanOS helps</p>
+        <h2>Operational pain by Canadian business type.</h2>
+      </div>
+
+      <div class="sector-stack">
+        <article class="sector-card reveal">
+          <span>01</span>
+          <h3>Manufacturing</h3>
+          <p>Late changeovers, missing shift context, quality rework, and production updates living in too many places.</p>
+        </article>
+        <article class="sector-card reveal">
+          <span>02</span>
+          <h3>Logistics and warehousing</h3>
+          <p>Inventory mismatches, dock delays, returns handling, and repeated customer status updates.</p>
+        </article>
+        <article class="sector-card reveal">
+          <span>03</span>
+          <h3>Professional services</h3>
+          <p>Client intake, approvals, document chasing, scope changes, and admin work trapped in email.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-pad dark-section" id="score">
+      <div class="section-head light reveal">
+        <p class="eyebrow">Rank my itch</p>
+        <h2>Score your workflow pain in under a minute.</h2>
+        <p>Move the sliders to estimate whether a recurring problem is ready for standard work, training, or automation.</p>
+      </div>
+
+      <form class="score-form reveal" id="scoreForm">
+        <label>
+          How often does it happen?
+          <input type="range" min="1" max="10" value="7" id="frequency" />
+        </label>
+        <label>
+          How much time does it waste?
+          <input type="range" min="1" max="10" value="8" id="timeWaste" />
+        </label>
+        <label>
+          How frustrating is it for the team?
+          <input type="range" min="1" max="10" value="6" id="friction" />
+        </label>
+        <label>
+          How much could be standardized or automated?
+          <input type="range" min="1" max="10" value="7" id="automation" />
+        </label>
+      </form>
+
+      <div class="score-output reveal">
+        <span>LeanOS itch score</span>
+        <strong id="personalScore">70</strong>
+        <p id="scoreAdvice">High enough to review during a strategy call.</p>
+        <a href="https://wa.me/17789962619?text=Hello%20LeanOS%20Consultants%2C%20I%20would%20like%20to%20discuss%20my%20workflow%20itch%20score." target="_blank" rel="noopener">Discuss on WhatsApp</a>
+      </div>
+    </section>
+
+    <section class="section-pad" id="method">
+      <div class="section-head reveal">
+        <p class="eyebrow">LeanOS method</p>
+        <h2>From messy daily work to measurable flow.</h2>
+      </div>
+
+      <div class="method-list">
+        <article class="reveal"><strong>1</strong><div><h3>Diagnose</h3><p>Find bottlenecks, rework, queue delays, and hidden waste.</p></div></article>
+        <article class="reveal"><strong>2</strong><div><h3>Standardize</h3><p>Create SOPs, visual routines, role clarity, and better handoffs.</p></div></article>
+        <article class="reveal"><strong>3</strong><div><h3>Measure</h3><p>Build scorecards, dashboards, and review cadence teams can use.</p></div></article>
+        <article class="reveal"><strong>4</strong><div><h3>Automate</h3><p>Remove repetitive admin with practical workflow automation.</p></div></article>
+        <article class="reveal"><strong>5</strong><div><h3>Scale</h3><p>Install follow-through so improvement becomes daily behavior.</p></div></article>
+      </div>
+    </section>
+
+    <section class="section-pad soft-bg" id="assessment">
+      <div class="assessment-card reveal">
+        <p class="eyebrow">Free starting point</p>
+        <h2>LeanOS Waste Assessment</h2>
+        <p>Score transportation, inventory, motion, waiting, overproduction, overprocessing, defects, and underutilized skills.</p>
+        <div class="score-preview">
+          <div><span>8</span><small>waste categories</small></div>
+          <div><span>64</span><small>practical questions</small></div>
+          <div><span>1</span><small>instant score</small></div>
+        </div>
+        <a href="office_assessment.html" class="btn btn-primary full-width">Start Free Assessment</a>
+      </div>
+    </section>
+
+    <section class="section-pad" id="contact">
+      <div class="section-head reveal">
+        <p class="eyebrow">Next step</p>
+        <h2>Tell us what work feels slower than it should.</h2>
+        <p>LeanOS will respond with the best next step: assessment, strategy call, training, automation review, or implementation roadmap.</p>
+      </div>
+
+      <form class="lead-form reveal" action="https://script.google.com/macros/s/AKfycbyzKp6vIbQhe6jXPD-RrKxsydnv4l7pD2yzlRn4D89EqIsWUj3F5zY-fhVFRh7lSl8b/exec" method="POST">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="email" placeholder="Work email" required />
+        <input type="text" name="company" placeholder="Company or organization" required />
+        <select name="interest" required>
+          <option value="">What do you need?</option>
+          <option>Free waste assessment</option>
+          <option>Operational improvement project</option>
+          <option>Team workshop or training</option>
+          <option>Workflow automation review</option>
+          <option>Strategy call</option>
+        </select>
+        <textarea name="message" rows="4" placeholder="What workflow, waste, quality, or admin problem should we look at?" required></textarea>
+        <button class="btn btn-primary full-width" type="submit">Submit Inquiry</button>
+      </form>
+    </section>
+  </main>
+
+  <a class="whatsapp-float" href="https://wa.me/17789962619?text=Hello%20LeanOS%20Consultants%2C%20I%20would%20like%20to%20book%20a%20strategy%20call." target="_blank" rel="noopener" aria-label="Send LeanOS a WhatsApp message">WA</a>
+
+  <nav class="bottom-nav" aria-label="Quick actions">
+    <a href="#itch-index"><span>01</span>Index</a>
+    <a href="#score"><span>02</span>Score</a>
+    <a href="#assessment"><span>03</span>Assess</a>
+    <a href="#contact"><span>04</span>Contact</a>
+  </nav>
+
+  <footer class="mobile-footer">
+    <strong>LeanOS Consultants</strong>
+    <p>Canada and USA. Lean systems, workflow improvement, quality tools, training, and practical automation.</p>
+    <div>
+      <a href="#itch-index">Itch Index</a>
+      <a href="#method">Method</a>
+      <a href="https://wa.me/17789962619" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </footer>
+
+  <script src="mobile-script.js"></script>
+</body>
+</html>
